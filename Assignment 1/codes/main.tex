@@ -1,0 +1,40 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{physics}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\let\vec\mathbf
+\usepackage{graphicx}
+
+\title{Assignment 1
+\\Probability and Random Variables }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{September 2020}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+Find the MGF for X \textasciitilde N(${\mu,\sigma^2}$)
+.
+\section{Solution}
+The Moment generating function for a Normal distribution is given as ${M_X(s) = E[e^{sX}]}$.
+\begin{align}
+    = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}e^{ sx} \,dx 
+    \\ = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-x-
+    (-\mu+\sigma^2)^2}{2\sigma^2}}e^{ \sigma s + \frac{\sigma^2 s^2}{2}} \,dx 
+    \\ = e^{ \sigma s + \frac{\sigma^2 s^2}{2}} \times E_x \textasciitilde N(\mu+ s\sigma^2 ,\sigma^2)[1]
+    \\= e^{ \sigma s + \frac{\sigma^2 s^2}{2}}
+\end{align}
+
+For the obtained expression, the MGF (0) =1.
+\\The same result is also obtained using the python code.
+\\\includegraphics[]{mgf.png}
+\\Python code link 
+
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%201/codes/mgf.py
+
+\end{document}
