@@ -23,8 +23,8 @@ Find the MGF for X \textasciitilde N(${\mu,\sigma^2}$)
 \section{Solution}
 The Moment generating function for a Normal distribution is given as ${M_X(s) = E[e^{sX}]}$.
 \begin{align}
-    = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}e^{ sx} \,dx 
-    \\ = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma}}e^{\frac{-x-
+    = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}e^{ sx} \,dx 
+    \\ = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-x-
     (-\mu+\sigma^2)^2}{2\sigma^2}}e^{ \sigma s + \frac{\sigma^2 s^2}{2}} \,dx 
     \\ = e^{ \sigma s + \frac{\sigma^2 s^2}{2}} \times E_x \textasciitilde N(\mu+ s\sigma^2 ,\sigma^2)[1]
     \\= e^{ \sigma s + \frac{\sigma^2 s^2}{2}}
@@ -32,9 +32,17 @@ The Moment generating function for a Normal distribution is given as ${M_X(s) = 
 
 For the obtained expression, the MGF (0) =1.
 \\The same result is also obtained using the python code.
-\\\includegraphics[]{mgf.png}
+\begin{figure}[h]
+\renewcommand{\theenumi}{1}
+\centering
+\includegraphics[ width=\columnwidth , height =5cm]{mgf.png}
+\caption{Result obtained from python code }
+\label{Fig:1}
+\end{figure}
 \\Python code link 
-
-https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%201/codes/mgf.py
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002
+/blob/main/Assignment%201/codes/mgf.py
+\end{lstlisting}
 
 \end{document}
