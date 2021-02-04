@@ -1,0 +1,78 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{enumerate}	
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{hyperref}
+%\usepackage[framemethod=tikz]{mdframed}
+\usepackage{listings}
+    %\usepackage[latin1]{inputenc}                                 %%
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                         %%
+  \providecommand{\nCr}[2]{\,^{#1}C_{#2}}
+  \providecommand{\nPr}[2]{\,^{#1}P_{#2}}
+  \lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\title{Assignment 2
+\\Probability and Random Variables }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{September 2020}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+In a meeting, {70\%} of the members favour and {30\% }oppose a certain proposal. A member is selected at random and we take X = 0 if he opposed, and X = 1 if he is in favour. Find E(X) and Var (X).
+
+\section{Solution}
+
+\\The same result is also obtained using the python code.
+\begin{figure}[h]
+\renewcommand{\theenumi}{1}
+\centering
+\includegraphics[ width=\columnwidth , height =5cm]{mgf.png}
+\caption{Result obtained from python code }
+\label{Fig:1}
+\end{figure}
+\\\textbf{Download python code from here}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%202/codes/bernoullidist.py
+\end{lstlisting}
+\\\textbf{Download latex code from here-}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%201/codes/main.tex
+\end{lstlisting}
+
+\end{document}
