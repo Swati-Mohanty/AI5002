@@ -57,12 +57,25 @@ columns=fullflexible
 In a meeting, {70\%} of the members favour and {30\% }oppose a certain proposal. A member is selected at random and we take X = 0 if he opposed, and X = 1 if he is in favour. Find E(X) and Var (X).
 
 \section{Solution}
-
-\\The same result is also obtained using the python code.
+A member opposes the proposal : X=0;\\
+A member favours the proposal : X=1;\\
+P(X=0) = 70 {\%} = 0.7\\
+P(X=1) = 30 {\%} =0.3
+\begin{align}
+    E(X) = \sum_{i=1}^{n} x_i p_i 
+    \\= 1\times0.7 + 0\times0.3 =0.7
+    \\\implies E(X) =0.7
+    \\E(X^2) = \sum_{i=1}^{n} (x_i)^2 p_i 
+    \\= 1^2\times0.7 + 0^2\times0.3 =0.7
+    \\Var(X) = E(X^2) -[E(X)]^2
+    \\= 0.7- 0.7^2 = 0.21
+    \\\implies Var(X) =0.21
+\end{align}
+\\The same  result is also obtained using the python code.
 \begin{figure}[h]
 \renewcommand{\theenumi}{1}
 \centering
-\includegraphics[ width=\columnwidth , height =5cm]{mgf.png}
+\includegraphics[ width=\columnwidth , height =3cm]{bern.png}
 \caption{Result obtained from python code }
 \label{Fig:1}
 \end{figure}
@@ -72,7 +85,7 @@ https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%202/codes/bernoulli
 \end{lstlisting}
 \\\textbf{Download latex code from here-}\\
 \begin{lstlisting}
-https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%201/codes/main.tex
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%202/codes/assignment2.tex
 \end{lstlisting}
 
 \end{document}
