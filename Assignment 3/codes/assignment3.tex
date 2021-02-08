@@ -1,0 +1,104 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{enumerate}	
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{hyperref}
+%\usepackage[framemethod=tikz]{mdframed}
+\usepackage{listings}
+    %\usepackage[latin1]{inputenc}                                 %%
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                         %%
+  \providecommand{\nCr}[2]{\,^{#1}C_{#2}}
+  \providecommand{\nPr}[2]{\,^{#1}P_{#2}}
+  \lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\title{Assignment 3
+\\Probability and Random Variables }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{February 2021}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+A factory has two machines A and B. Past
+record shows that machine A produced
+60{\%} of the items of output and machine
+B produced 40{\%} of the items. Further, 2{\%}
+of the items produced by machine A and
+1{\%} produced by machine B were defective.
+All the items are put into one stockpile and
+then one item is chosen at random from this
+and is found to be defective. What is the
+probability that it was produced by machine B?
+
+\section{Solution}
+Let the events be defined as
+\\A = Item produced by machine A
+\\B = Item produced by machine B
+\\D = Item produced is defective
+P(A) = 60 {\%} = 0.6\\
+P(B) = 40 {\%} =0.4
+
+\begin{align}
+    P(D|A)  = 2 {\%} =0.02
+   \\P(D|B) =  1 {\%} =0.01
+\end{align}
+By Baye's rule,
+\begin{align}
+    P(B|D) = \frac{P(B)\times P(D|B)}{P(B)\times P(D|B) + P(A)\times P(D|A)}
+    \\P(B|D) = \frac{0.4\times 0.01}{0.4\times 0.01 + 0.6\times 0.02}
+    \\P(B|D) = 0.25
+\end{align}
+The probability that the defective item selected at random is produced by machine B is 25{\%}
+\\Similar  result is also obtained with random samples generated using the python code.
+\begin{figure}[h]
+\renewcommand{\theenumi}{1}
+\centering
+\includegraphics[ width=\columnwidth , height =3cm]{bayes.png}
+\caption{Result obtained from python code }
+\label{Fig:1}
+\end{figure}
+\\\textbf{Download python code from here}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment%203/codes/bayes.py
+\end{lstlisting}
+\\\textbf{Download latex code from here-}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/tree/main/Assignment%203/codes/assignment3.tex
+\end{lstlisting}
+
+\end{document}
