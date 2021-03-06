@@ -62,17 +62,45 @@ six. Find the expected value of the amount he
 wins / loses.
 
 \section{Solution}
+Let X denote the random variable of winning/losing in the game.
+\\P(X = 1)= P(win) = getting a 6 on rolling a fair die.
+\\P(X = 0)= P(loss) = getting a 6 on rolling a fair die.
+\\P(X = 1) = p =$\frac{1}{6}$  = 0.167
+\\P(X = 0) = 1-p = $\frac{5}{6}$ = 0.833
+\\Let Y denote the random variable of winning the game in Nth trial, there can be 4 possible cases with the following probability:
+\\(i)Wins in first throw:\begin{align}
+    P(Y=1) = p = 0.167
+\end{align}
+\\(ii)Wins in the second throw :\begin{align}
+    P(Y=2) = (1-p)\times p = 0.139
+\end{align}
+\\(ii)Wins in the third throw :\begin{align}
+    P(Y=3) = (1-p)\times(1-p)\times p = 0.107
+\end{align}
+\\(ii)Does not wins in any throw :\begin{align}
+    P(Y=3) = (1-p)\times(1-p)\times (1-p) = 0.596
+\end{align}
+
+Net amount = P(Y=1)\times1 +P(Y=1)\times(-1+1) + P(Y=1)\times(-1-1+1) + P(Y=1)\times(-1-1-1) = -1.73
 
 
 
+\\The probabilities were simulated using the python code.
+\begin{figure}[h]
+\renewcommand{\theenumi}{1}
+\centering
+\includegraphics[ width=\columnwidth , height =5cm]{unif.PNG}
+\caption{Simulation for tossing a fair coin  }
+\label{Fig:1}
 
 
+\end{figure}
 
-\\\textbf{Download python code from here}\\
+\textbf{Download python code from here}\\
 \begin{lstlisting}
 https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_5/codes/die.py
 \end{lstlisting}
-\\\textbf{Download latex code from here-}\\
+\textbf{Download latex code from here-}\\
 \begin{lstlisting}
 https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_5/codes/assignment5.tex
 \end{lstlisting}
