@@ -66,22 +66,22 @@ and is found to be defective. What is the
 probability that it was produced by machine B?
 
 \section{Solution}
-Let the events be defined as
-\\A = Item produced by machine A
-\\B = Item produced by machine B
-\\D = Item produced is defective
-P(A) = 60 {\%} = 0.6\\
-P(B) = 40 {\%} =0.4
+Let A denote the random variables of an item produced and D denote it being defective
+\\(A=0) : Item produced by machine A
+\\(A=1) : Item produced by machine A
+\\(D=1) = Item produced is defective
+\\P(A=0) = 60 {\%} = 0.6\\
+P(A=1) = 40 {\%} =0.4i
 
 \begin{align}
-    P(D|A)  = 2 {\%} =0.02
-   \\P(D|B) =  1 {\%} =0.01
+    P(D=1|A=0) = P(1|0) = 2 {\%} =0.02
+   \\P(D=1|A=1) = P(1|1) =  1 {\%} =0.01
 \end{align}
 By Baye's rule,
 \begin{align}
-    P(B|D) = \frac{P(B)\times P(D|B)}{P(B)\times P(D|B) + P(A)\times P(D|A)}
-    \\P(B|D) = \frac{0.4\times 0.01}{0.4\times 0.01 + 0.6\times 0.02}
-    \\P(B|D) = 0.25
+    P(A=1|D=1) = \frac{P(1)\times P(1|1)}{P(1)\times P(1|1) + P(0)\times P(1|0)}
+    \\P(A=1|D=1) = \frac{0.4\times 0.01}{0.4\times 0.01 + 0.6\times 0.02}
+    \\P(A=1|D=1) = 0.25
 \end{align}
 The probability that the defective item selected at random is produced by machine B is 25{\%}
 \\Similar  result is also obtained with random samples generated using the python code.
