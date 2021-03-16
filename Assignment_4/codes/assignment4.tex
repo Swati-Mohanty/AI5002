@@ -62,22 +62,20 @@ of three coins.
 \\(iii) number of heads in four tosses of a coin.
 
 \section{Solution}
-Let Y denote the event of tossing a coin. Considering a fair coin, the probability of getting a Head or Tail P(Y) = 0.5
-\\We have i coin tosses, with probability p of Heads and (1-p) of Tails. We
-conduct the trials independently. 
-\\In general , the probability of getting of j Head/Tail is given as:
+Let Y denote the random variable tossing a coin. Considering a fair coin, the probability of getting a Head or Tail P(Y) = 0.5 =p=1-p
+\\In general , the probability of getting of j Head/Tail in n tosses is given as:
 \begin{align}
-    P(Y = j) = \Comb{n}{j}\times { p^j (1-p)^{(n-j)}} 
+    P(Y = j) = \Comb{n}{j}\times { p^j (1-p)^{(n-j)}} = \Comb{n}{j}\times { p^n } 
 \end{align}
-Consider a random variable X where X = Number of successes.Suppose we have n trials. We write
+The binomial random variable for n tosses with p probability is:
 X \textasciitilde B(n, p) 
 \\(i)
-Let X denote the random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 2 tosses of coin is given as:
-\\X \textasciitilde B(2, 0.5) 
-\\Using equation 
+ X = random variable of number of Heads.
+The probability distribution of getting exactly j Heads in 2 tosses of coin is given as: X \textasciitilde B(2, 0.5)
+ \[\implies n=2; j \in (0,n)\]
+Using equation (1)
 \begin{align}
-    P(X = j) = \Comb{2}{j}\times { 0.5^j (1-0.5)^{(2-j)}} =\Comb{2}{j}\times { 0.5^2}
+    P(X = j)  =\Comb{2}{j}\times { 0.5^2}
 \end{align}
 We get the pdf as below:
 \begin{align}
@@ -87,22 +85,13 @@ We get the pdf as below:
     \\P(X=2) = \Comb{2}{2}\times { 0.5^2} = 0.25
 \end{align}
 
-\\The distribution table is given as:
-\begin{center}
-\begin{tabular}{ |c|c|c|c| } 
- \hline
- j & 0 & 1 & 2 \\\hline 
- P(X=j) & 0.25 &0.5 & 0.25 \\ 
- \hline
-\end{tabular}
-\end{center}
 
-(ii)Let X denote the random variable of number of Tails.
-The probability distribution of getting exactly j Tails in 3 tosses of coin is given as:
-\\X \textasciitilde B(3, 0.5) 
-\\Using equation 
+(ii)Let X = random variable of number of Tails.
+The probability distribution of getting exactly j Tails in 3 tosses of coin is given as: X \textasciitilde B(3, 0.5) 
+\[\implies n=3; j \in (0,n)\]
+Using equation (1)
 \begin{align}
-    P(X = j) = \Comb{3}{j}\times { 0.5^j (1-0.5)^{(3-j)}} =\Comb{3}{j}\times { 0.5^3}
+    P(X = j)  =\Comb{3}{j}\times { 0.5^3}
 \end{align}
 We get the pdf as below:
 \begin{align}
@@ -112,22 +101,13 @@ We get the pdf as below:
     \\P(X=2) = \Comb{3}{2}\times { 0.5^3} = 0.375
     \\P(X=3) = \Comb{3}{3}\times { 0.5^3} = 0.125
 \end{align}
-\\The probability distribution of X is: 
 
-\begin{center}
-\begin{tabular}{ |c|c|c|c|c| } 
- \hline
- j & 0 & 1 & 2 & 3 \\ \hline
- P(X=j) & 0.125& 0.375 & 0.375 & 0.125 \\ 
- \hline
-\end{tabular}
-\end{center}
-(iii)Let X denote the random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:
-\\X \textasciitilde B(4, 0.5) 
-\\Using equation 
+(iii)Let X = random variable of number of Heads.
+The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:  X \textasciitilde B(4, 0.5) 
+\[\implies n=4; j \in (0,n)\]
+Using equation (1)
 \begin{align}
-    P(X = j) = \Comb{4}{j}\times { 0.5^j (1-0.5)^{(4-j)}} =\Comb{4}{j}\times { 0.5^4}
+    P(X = j)  =\Comb{4}{j}\times { 0.5^4}
 \end{align}
 We get the pdf as below:
 \begin{align}
@@ -138,13 +118,17 @@ We get the pdf as below:
     \\P(X=3) = \Comb{4}{3}\times { 0.5^4} = 0.25
     \\P(X=4) = \Comb{4}{4}\times { 0.5^4} = 0.0625
 \end{align}
-\\The probability distribution of X is: 
+\\The probability distribution of X for n tosses is: 
 
 \begin{center}
 \begin{tabular}{ |c|c|c|c|c|c| } 
  \hline
- j & 0 & 1 & 2 & 3 & 4 \\ \hline
- P(X=j) & 0.0625 & 0.25 & 0.375 & 0.25 & 0.0625 \\ 
+ j & 0 & 1 & 2 & 3&4 \\ \hline
+  X \textasciitilde B(2,0.5) & 0.25 &0.5 & 0.25 & 0 & 0\\ 
+ \hline
+ X \textasciitilde B(3,0.5) & 0.125& 0.375 & 0.375 & 0.125 & 0 \\ 
+ \hline
+X \textasciitilde B(4,0.5) & 0.0625 & 0.25 & 0.375 & 0.25 & 0.0625 \\ 
  \hline
 \end{tabular}
 \end{center}
