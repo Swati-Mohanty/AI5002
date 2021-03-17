@@ -68,10 +68,10 @@ Let Y denote the random variable tossing a coin. Considering a fair coin, the pr
     P(Y = j) = \Comb{n}{j}\times { p^j (1-p)^{(n-j)}} = \Comb{n}{j}\times { p^n } 
 \end{align}
 The binomial random variable for n tosses with p probability is:
-X \textasciitilde B(n, p) 
+$X \sim B(n, p) $
 \\(i)
  X = random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 2 tosses of coin is given as: X \textasciitilde B(2, 0.5)
+The probability distribution of getting exactly j Heads in 2 tosses of coin is given as: X \sim B(2, 0.5)
  \[\implies n=2; j \in (0,n)\]
 Using equation (1)
 \begin{align}
@@ -87,7 +87,7 @@ We get the pdf as below:
 
 
 (ii)Let X = random variable of number of Tails.
-The probability distribution of getting exactly j Tails in 3 tosses of coin is given as: X \textasciitilde B(3, 0.5) 
+The probability distribution of getting exactly j Tails in 3 tosses of coin is given as: X \sim B(3, 0.5) 
 \[\implies n=3; j \in (0,n)\]
 Using equation (1)
 \begin{align}
@@ -103,7 +103,7 @@ We get the pdf as below:
 \end{align}
 
 (iii)Let X = random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:  X \textasciitilde B(4, 0.5) 
+The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:  X \sim B(4, 0.5) 
 \[\implies n=4; j \in (0,n)\]
 Using equation (1)
 \begin{align}
@@ -118,17 +118,17 @@ We get the pdf as below:
     \\P(X=3) = \Comb{4}{3}\times { 0.5^4} = 0.25
     \\P(X=4) = \Comb{4}{4}\times { 0.5^4} = 0.0625
 \end{align}
-\\The probability distribution of X for n tosses is: 
+The probability distribution of X for n tosses is: 
 
 \begin{center}
-\begin{tabular}{ |c|c|c|c|c|c| } 
+\begin{tabular}{ |c|c|c|c|c|c|c| } 
  \hline
- j & 0 & 1 & 2 & 3&4 \\ \hline
-  X \textasciitilde B(2,0.5) & 0.25 &0.5 & 0.25 & 0 & 0\\ 
+n & j & 0 & 1 & 2 & 3&4 \\ \hline
+  2 & P(X=j)=\Comb{2}{j} { 0.5^2}  & 0.25 &0.5 & 0.25 & 0 & 0\\ 
  \hline
- X \textasciitilde B(3,0.5) & 0.125& 0.375 & 0.375 & 0.125 & 0 \\ 
+ 3 &P(X=j)=\Comb{3}{j} { 0.5^3} & 0.125& 0.375 & 0.375 & 0.125 & 0 \\ 
  \hline
-X \textasciitilde B(4,0.5) & 0.0625 & 0.25 & 0.375 & 0.25 & 0.0625 \\ 
+4 & P(X=j)=\Comb{4}{j} { 0.5^4} & 0.0625 & 0.25 & 0.375 & 0.25 & 0.0625 \\ 
  \hline
 \end{tabular}
 \end{center}
@@ -145,7 +145,7 @@ The probabilities were simulated using the python code.
 \begin{lstlisting}
 https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_4/codes/cointoss.py
 \end{lstlisting}
-\\\textbf{Download latex code from here-}\\
+\textbf{Download latex code from here-}\\
 \begin{lstlisting}
 https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_4/codes/assignment4.tex
 \end{lstlisting}
