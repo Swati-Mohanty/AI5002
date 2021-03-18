@@ -77,13 +77,7 @@ Using equation (1)
 \begin{align}
     P(X = j)  =\Comb{2}{j}\times { 0.5^2}
 \end{align}
-We get the pdf as below:
-\begin{align}
-    P(X=0) =\Comb{2}{0}\times { 0.5^2}
-    =0.25
-    \\P(X=1) = \Comb{2}{1}\times { 0.5^2} = 0.5
-    \\P(X=2) = \Comb{2}{2}\times { 0.5^2} = 0.25
-\end{align}
+
 
 
 (ii)Let X = random variable of number of Tails.
@@ -93,14 +87,7 @@ Using equation (1)
 \begin{align}
     P(X = j)  =\Comb{3}{j}\times { 0.5^3}
 \end{align}
-We get the pdf as below:
-\begin{align}
-    P(X=0) = \Comb{3}{0}\times { 0.5^0 (1-0.5)^{(3-0)}}
-    =0.125
-    \\P(X=1) = \Comb{3}{1}\times { 0.5^3} = 0.375
-    \\P(X=2) = \Comb{3}{2}\times { 0.5^3} = 0.375
-    \\P(X=3) = \Comb{3}{3}\times { 0.5^3} = 0.125
-\end{align}
+
 
 (iii)Let X = random variable of number of Heads.
 The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:  X \sim B(4, 0.5) 
@@ -109,18 +96,11 @@ Using equation (1)
 \begin{align}
     P(X = j)  =\Comb{4}{j}\times { 0.5^4}
 \end{align}
-We get the pdf as below:
-\begin{align}
-    P(X=0) =(\Comb{4}{0}){ 0.5^0 (1-0.5)^{(4-0)}}
-    =0.0625
-    \\P(X=1) = \Comb{4}{1}\times { 0.5^4} = 0.25
-    \\P(X=2) = \Comb{4}{2}\times { 0.5^4} = 0.375
-    \\P(X=3) = \Comb{4}{3}\times { 0.5^4} = 0.25
-    \\P(X=4) = \Comb{4}{4}\times { 0.5^4} = 0.0625
-\end{align}
+
 The probability distribution of X for n tosses is: 
 
 \begin{center}
+\resizebox{\columnwidth}{!}{
 \begin{tabular}{ |c|c|c|c|c|c|c| } 
  \hline
 n & j & 0 & 1 & 2 & 3&4 \\ \hline
@@ -131,6 +111,7 @@ n & j & 0 & 1 & 2 & 3&4 \\ \hline
 4 & P(X=j)=\Comb{4}{j} { 0.5^4} & 0.0625 & 0.25 & 0.375 & 0.25 & 0.0625 \\ 
  \hline
 \end{tabular}
+}
 \end{center}
 The probabilities were simulated using the python code.
 \begin{figure}[h]
