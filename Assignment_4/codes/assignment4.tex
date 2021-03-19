@@ -62,40 +62,14 @@ of three coins.
 \\(iii) number of heads in four tosses of a coin.
 
 \section{Solution}
-Let Y denote the random variable tossing a coin. Considering a fair coin, the probability of getting a Head or Tail P(Y) = 0.5 =p=1-p
+Let Y denote the random variable tossing a coin. Considering a fair coin, the probability of getting a Head or Tail P(X) = 0.5 =p=1-p
 \\In general , the probability of getting of j Head/Tail in n tosses is given as:
 \begin{align}
-    P(Y = j) = \Comb{n}{j}\times { p^j (1-p)^{(n-j)}} = \Comb{n}{j}\times { p^n } 
+    P(X = j) = \Comb{n}{j}\times { p^j (1-p)^{(n-j)}} = \Comb{n}{j}\times { p^n } 
 \end{align}
 The binomial random variable for n tosses with p probability is:
 $X \sim B(n, p) $
-\\(i)
- X = random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 2 tosses of coin is given as: X \sim B(2, 0.5)
- \[\implies n=2; j \in (0,n)\]
-Using equation (1)
-\begin{align}
-    P(X = j)  =\Comb{2}{j}\times { 0.5^2}
-\end{align}
 
-
-
-(ii)Let X = random variable of number of Tails.
-The probability distribution of getting exactly j Tails in 3 tosses of coin is given as: X \sim B(3, 0.5) 
-\[\implies n=3; j \in (0,n)\]
-Using equation (1)
-\begin{align}
-    P(X = j)  =\Comb{3}{j}\times { 0.5^3}
-\end{align}
-
-
-(iii)Let X = random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:  X \sim B(4, 0.5) 
-\[\implies n=4; j \in (0,n)\]
-Using equation (1)
-\begin{align}
-    P(X = j)  =\Comb{4}{j}\times { 0.5^4}
-\end{align}
 
 The probability distribution of X for n tosses is: 
 
