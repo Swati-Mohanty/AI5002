@@ -2,37 +2,36 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import bernoulli
 import random
+
 simlen=int(1e6)
-sample_size=6
 
-w=1
-l=5
-prob_w=w/sample_size
-prob_l=l/sample_size
-
+w=1/6
+l=5/6
+exp_amt=0
+amt = 0
 #Simulations using Bernoulli r.v.
-win = bernoulli.rvs(size=simlen,p=prob_w)
-loss= bernoulli.rvs(size=simlen,p=prob_l)
+win = bernoulli.rvs(size=simlen,p=w)
+loss= bernoulli.rvs(size=simlen,p=l)
+prob_win = np.sum(win)/simlen
+prob_loss = np.sum(loss)/simlen
+#print(prob_loss)
 
-#Event of getting 6 in throws
-e1 = win
-e2 = loss*win
-e3 = loss*loss*win
-e4 = loss*loss*loss
-#Probability of each event
-p1 = (np.sum(e1))/simlen
-p2 = (np.sum(e2))/simlen
-p3 = (np.sum(e3))/simlen
-p4 = (np.sum(e4))/simlen
+def recur(y):
+  if y==6:
+    return prob_win*(amt+1)
+  else:
+    return prob_loss*(amt-1)
 
-print('Simulated results')
-print(p1)
-print(p2)
-print(p3)
-print(p4)
+for i in range (simlen):
+  amt = 0
+  for j in range (3):
+    y = random.randint(1,6)
+    amt = amt+ recur(y)
+    #print(amt/(3))
+  exp_amt +=amt/(3)
+print('Simulated results :')
+print (exp_amt/simlen)
 
-amount = (p1*1) + (p2*0) - (p3*1) - (p4*3)
-print(amount)
 
 #Theoretical
 r1=0
@@ -60,10 +59,6 @@ pr3=r3/1000
 pr4=r4/1000
 
 print('Theoretical results')
-print(pr1)
-print(pr2)
-print(pr3)
-print(pr4)
 
 amnt = (pr1*1)+(pr2*0)-(pr3*1)-(pr4*3)
 print(amnt)
