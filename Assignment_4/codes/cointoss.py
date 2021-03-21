@@ -1,167 +1,48 @@
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
-\usepackage{amsthm}
-\usepackage{graphicx}
-\usepackage{mathrsfs}
-\usepackage{txfonts}
-\usepackage{stfloats}
-\usepackage{pgfplots}
-\usepackage{cite}
-\usepackage{cases}
-\usepackage{mathtools}
-\usepackage{caption}
-\usepackage{enumerate}	
-\usepackage{enumitem}
-\usepackage{amsmath}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage{multicol}
-%\usepackage{xtab}
-\usepackage{longtable}
-\usepackage{multirow}
-%\usepackage{algorithm}
-%\usepackage{algpseudocode}
-\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
-\usepackage{enumitem}
-\usepackage{mathtools}
-\usepackage{gensymb}
-\usepackage{hyperref}
-%\usepackage[framemethod=tikz]{mdframed}
-\usepackage{listings}
-    %\usepackage[latin1]{inputenc}                                 %%
-    \usepackage{color}                                            %%
-    \usepackage{array}                                            %%
-    \usepackage{longtable}                                        %%
-    \usepackage{calc}                                             %%
-    \usepackage{multirow}                                         %%
-    \usepackage{hhline}                                           %%
-    \usepackage{ifthen}                                         %%
-  \providecommand{\nCr}[2]{\,^{#1}C_{#2}}
-  \providecommand{\nPr}[2]{\,^{#1}P_{#2}}
-  \lstset{
-%language=C,
-frame=single, 
-breaklines=true,
-columns=fullflexible
-}
+import numpy as np
+import random
+import matplotlib.pyplot as plt 
+from scipy.stats import bernoulli
 
-\title{Assignment 4
-\\Probability and Random Variables }
-\author{Swati Mohanty (EE20RESCH11007) }
-\date{February 2021}
+sample_size = 10000
 
-\begin{document}
+#Bernoulli simulation
+x1 = bernoulli.rvs(size=sample_size,p=0.5)
+x2 = bernoulli.rvs(size=sample_size,p=0.5)
+x3 = bernoulli.rvs(size=sample_size,p=0.5)
+x4 = bernoulli.rvs(size=sample_size,p=0.5)
 
-\maketitle
+y1 = x1+x2
+y2 = x1+x2+x3
+y3 = x1+x2+x3+x4
 
+#print(y1)
+#print(y2)
+#print(y3)
 
-\section{Problem}
-Find the probability distribution of
-\\(i) number of heads in two tosses of a coin.
-\\(ii) number of tails in the simultaneous tosses
-of three coins.
-\\(iii) number of heads in four tosses of a coin.
+print('Bernoulli simulation')
+#2 toss
+prob_y1 = [np.equal(y1,i).mean() for i in range(3)]
+print(prob_y1)
+#3 toss
+prob_y2 = [np.equal(y2,i).mean() for i in range(4)]
+print(prob_y2)
+#4 toss#
+prob_y3 = [np.equal(y3,i).mean() for i in range(5)]
+print(prob_y3)
 
-\section{Solution}
-Let Y denote the random variable tossing a coin. Considering a fair coin, the probability of getting a Head or Tail P(Y) = 0.5 =p=1-p
-\\In general , the probability of getting of j Head/Tail in n tosses is given as:
-\begin{align}
-    P(Y = j) = \Comb{n}{j}\times { p^j (1-p)^{(n-j)}} = \Comb{n}{j}\times { p^n } 
-\end{align}
-The binomial random variable for n tosses with p probability is:
-X \textasciitilde B(n, p) 
-\\(i)
- X = random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 2 tosses of coin is given as: X \textasciitilde B(2, 0.5)
- \[\implies n=2; j \in (0,n)\]
-Using equation (1)
-\begin{align}
-    P(X = j)  =\Comb{2}{j}\times { 0.5^2}
-\end{align}
-We get the pdf as below:
-\begin{align}
-    P(X=0) =\Comb{2}{0}\times { 0.5^2}
-    =0.25
-    \\P(X=1) = \Comb{2}{1}\times { 0.5^2} = 0.5
-    \\P(X=2) = \Comb{2}{2}\times { 0.5^2} = 0.25
-\end{align}
+#Binomial simulation
+print('Binomial simulation')
+y11=np.random.binomial(n=2, p=0.5, size=sample_size)
+#print (y11)
+prob_y11 = [np.equal(y11,i).mean() for i in range(3)]
+print(prob_y11)
 
-\\The distribution table is given as:
-\begin{center}
-\begin{tabular}{ |c|c|c|c| } 
- \hline
- j & 0 & 1 & 2 \\\hline 
- P(X=j) & 0.25 &0.5 & 0.25 \\ 
- \hline
-\end{tabular}
-\end{center}
+y12=np.random.binomial(n=3, p=0.5, size=sample_size)
+#print (y12)
+prob_y12 = [np.equal(y12,i).mean() for i in range(4)]
+print(prob_y12)
 
-(ii)Let X = random variable of number of Tails.
-The probability distribution of getting exactly j Tails in 3 tosses of coin is given as: X \textasciitilde B(3, 0.5) 
-\[\implies n=3; j \in (0,n)\]
-Using equation (1)
-\begin{align}
-    P(X = j)  =\Comb{3}{j}\times { 0.5^3}
-\end{align}
-We get the pdf as below:
-\begin{align}
-    P(X=0) = \Comb{3}{0}\times { 0.5^0 (1-0.5)^{(3-0)}}
-    =0.125
-    \\P(X=1) = \Comb{3}{1}\times { 0.5^3} = 0.375
-    \\P(X=2) = \Comb{3}{2}\times { 0.5^3} = 0.375
-    \\P(X=3) = \Comb{3}{3}\times { 0.5^3} = 0.125
-\end{align}
-\\The probability distribution of X is: 
-
-\begin{center}
-\begin{tabular}{ |c|c|c|c|c| } 
- \hline
- j & 0 & 1 & 2 & 3 \\ \hline
- P(X=j) & 0.125& 0.375 & 0.375 & 0.125 \\ 
- \hline
-\end{tabular}
-\end{center}
-(iii)Let X = random variable of number of Heads.
-The probability distribution of getting exactly j Heads in 4 tosses of coin is given as:  X \textasciitilde B(4, 0.5) 
-\[\implies n=4; j \in (0,n)\]
-Using equation (1)
-\begin{align}
-    P(X = j)  =\Comb{4}{j}\times { 0.5^4}
-\end{align}
-We get the pdf as below:
-\begin{align}
-    P(X=0) =(\Comb{4}{0}){ 0.5^0 (1-0.5)^{(4-0)}}
-    =0.0625
-    \\P(X=1) = \Comb{4}{1}\times { 0.5^4} = 0.25
-    \\P(X=2) = \Comb{4}{2}\times { 0.5^4} = 0.375
-    \\P(X=3) = \Comb{4}{3}\times { 0.5^4} = 0.25
-    \\P(X=4) = \Comb{4}{4}\times { 0.5^4} = 0.0625
-\end{align}
-\\The probability distribution of X is: 
-
-\begin{center}
-\begin{tabular}{ |c|c|c|c|c|c| } 
- \hline
- j & 0 & 1 & 2 & 3 & 4 \\ \hline
- P(X=j) & 0.0625 & 0.25 & 0.375 & 0.25 & 0.0625 \\ 
- \hline
-\end{tabular}
-\end{center}
-The probabilities were simulated using the python code.
-\begin{figure}[h]
-\renewcommand{\theenumi}{1}
-\centering
-\includegraphics[ width=\columnwidth , height =3cm]{cointoss.PNG}
-\caption{Simulation for tossing a fair coin  }
-\label{Fig:1}
-\end{figure}
-
-\textbf{Download python code from here}\\
-\begin{lstlisting}
-https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_4/codes/cointoss.py
-\end{lstlisting}
-\\\textbf{Download latex code from here-}\\
-\begin{lstlisting}
-https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_4/codes/assignment4.tex
-\end{lstlisting}
-
-\end{document}
+y13=np.random.binomial(n=4, p=0.5, size=sample_size)
+#print (y13)
+prob_y13 = [np.equal(y13,i).mean() for i in range(5)]
+print(prob_y13)
