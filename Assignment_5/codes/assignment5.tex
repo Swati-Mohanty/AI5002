@@ -62,31 +62,31 @@ six. Find the expected value of the amount he
 wins / loses.
 
 \section{Solution}
-Let X denote the random variable of winning/losing in the game.
-\\P(X = 1)= P(win) = p =$\frac{1}{6}$  = 0.167
-\\P(X = 0)= P(loss) = 1-p = $\frac{5}{6}$ = 0.833.
+\\P(win) = p =$\frac{1}{6}$  = 0.167
+\\ P(loss) = 1-p = $\frac{5}{6}$ = 0.833.
  
-\\Let Y denote the random variable of winning the game in Nth trial,A(Y) denote the amount in each case.The possible cases are:
-(i)Wins in first throw:\begin{align}
-    P(Y=1) = p = p
-    \\A(Y=1) = +1
+\\Let Y denote the random variable of winning the game in Nth trial
+\\$X_i$ denote the amount in each case and $ X_i\in(+1,-1)$. The possible cases are:
+\\(i)Wins in first throw:\begin{align}
+    P(Y=1) = p 
+    \\X_1 = +1
 \end{align}
 (ii)Wins in the second throw :\begin{align}
     P(Y=2) = (1-p)\times p = p-p^2
-    \\A(Y=2) = -1+1=0
+    \\X_2 = \overline{X_1} + X_1 = -1 +1 = 0
 \end{align}
 (iii)Wins in the third throw :\begin{align}
     P(Y=3) = (1-p)\times(1-p)\times p = p(1-p)^2
-    \\A(Y=3) = -1-1+1=-1
+    \\X_3 = \overline{X_1} +\overline{X_1}+ X_1 = -1-1+1=-1
 \end{align}
 (iv)Does not wins in any throw :\begin{align}
     P(Y=3) = (1-p)\times(1-p)\times (1-p) = (1-p)^3
-    \\A(Y=3) = -1-1-1=-3
+    \\X_3 = \overline{X_1} +\overline{X_1}+ X_1 = -1-1-1=-3
 \end{align}
 
 Net amount = Expectation = E[Y] 
 \begin{align}
-    E[Y] =  \sum_{n=1}^{3} P(Y=n)A(Y=n)
+    E[Y] =  \sum_{n=1}^{3} P(Y=n)X_n
     \\= (p\times 1) +0 + (p(1-p)^2 \times -1) +((1-p)^3\times -3)
     \\=0.167\times1 +0.107\times-1 + 0.596\times-3
     \\=-1.73
@@ -98,7 +98,7 @@ Net amount = Expectation = E[Y]
 \begin{figure}[h]
 \renewcommand{\theenumi}{1}
 \centering
-\includegraphics[ width=\columnwidth , height =5cm]{unif.PNG}
+\includegraphics[ width=\columnwidth , height =3cm]{unif.PNG}
 \caption{Simulation for tossing a fair coin  }
 \label{Fig:1}
 
