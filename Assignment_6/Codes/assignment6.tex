@@ -59,15 +59,26 @@ is either zero or one, what is the probability
 that the value of the determinant is positive?
 (Assume that the individual entries of the
 determinant are chosen independently, each
-value being assumed with probability \frac{1}{2}).
+value being assumed with probability $\frac{1}{2}$).
 
 \section{Solution}
-\\P(1) = P(0) = p =$\frac{1}{2}$ 
-
-\\$X_i$ denote the random variable of each element in the matrix being 0 or 1. 
-
-
-
+P(1) = P(0) = p =$\frac{1}{2}$ = 0.5
+\\$X_i$ denote the random variable of each element in the matrix being 0 or 1. \implies P($X_i$)=0.5
+\\
+The elements of the matrix can be arranged in $2^4$ = 16 ways. The favourable arrangements for determinant to be positive are:
+\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}
+, \begin{bmatrix}
+1 & 0 \\
+1 & 1
+\end{bmatrix}
+, \begin{bmatrix}
+1 & 1 \\
+0 & 1
+\end{bmatrix}
+\\Probability of positive determinant  = $\frac{3}{16} = 0.187$
 \\The probabilities were simulated using the python code.
 
 \textbf{Download python code from here}\\
