@@ -1,0 +1,82 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{enumerate}	
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{hyperref}
+%\usepackage[framemethod=tikz]{mdframed}
+\usepackage{listings}
+    %\usepackage[latin1]{inputenc}                                 %%
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                         %%
+  \providecommand{\nCr}[2]{\,^{#1}C_{#2}}
+  \providecommand{\nPr}[2]{\,^{#1}P_{#2}}
+  \lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\title{Assignment 6
+\\Probability and Random Variables }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{March 2021}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+If each element of a second order determinant
+is either zero or one, what is the probability
+that the value of the determinant is positive?
+(Assume that the individual entries of the
+determinant are chosen independently, each
+value being assumed with probability \frac{1}{2}).
+
+\section{Solution}
+\\P(1) = P(0) = p =$\frac{1}{2}$ 
+
+\\$X_i$ denote the random variable of each element in the matrix being 0 or 1. 
+
+
+
+\\The probabilities were simulated using the python code.
+
+\textbf{Download python code from here}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_6/codes/detmatrix.py
+\end{lstlisting}
+\textbf{Download latex code from here-}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_6/codes/assignment6.tex
+\end{lstlisting}
+
+\end{document}
