@@ -1,0 +1,82 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{enumerate}	
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{hyperref}
+%\usepackage[framemethod=tikz]{mdframed}
+\usepackage{listings}
+    %\usepackage[latin1]{inputenc}                                 %%
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                         %%
+  \providecommand{\nCr}[2]{\,^{#1}C_{#2}}
+  \providecommand{\nPr}[2]{\,^{#1}P_{#2}}
+  \lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\title{Assignment 7
+\\Probability and Random Variables }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{March 2021}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+A box contain 4 white balls and 3 red balls.In succession,two balls are randomly selected and removed from the box,Given that the first removed ball is white,the probability that the second removed ball is red is ?
+
+\section{Solution}
+Let $X_1$ and $X_2$ denote the random variables of drawing a red ball and white ball respectively. 
+\begin{align}
+\\P(X_1) = \frac{3}{7}\\
+P(X_2) = \frac{4}{7}
+    \\P(X_2|X_1) = P(X_2) = \frac{4}{7}
+\end{align}
+Since the second ball is drawn without replacement, By conditional probability,
+\begin{align}
+    P(X_1|X_2) = \frac{P(X_2|X_1)\times P(X_1)}{P(X_2)}
+    \\ P(X_1|X_2) = \frac{\frac{4}{7}\times \frac{3}{6} }{\frac{4}{7}} = \frac{1}{2}
+    \\ P(X_1|X_2) = 0.5
+\end{align}
+
+\\\textbf{Download python code from here}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_8/codes/gate_19.py
+\end{lstlisting}
+\textbf{Download latex code from here-}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_8/codes/assignment8.tex
+\end{lstlisting}
+
+\end{document}
