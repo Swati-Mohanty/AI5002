@@ -43,10 +43,10 @@ breaklines=true,
 columns=fullflexible
 }
 
-\title{Assignment 2
+\title{Compulsory Assignment
 \\Probability and Random Variables }
 \author{Swati Mohanty (EE20RESCH11007) }
-\date{March 2021}
+\date{April 2021}
 
 \begin{document}
 
@@ -65,7 +65,15 @@ Let, $D= X_1 -X_2$.
     &= P(X_1 -X_2 +n_2 = d +n_2)\\
     &= \binom{n_1+n_2}{n_2+d} p^{n_2+d} q^{n_1-d}, d= -n_2\ \text{to}\ n_1\ \label{subtraction}
 \end{align}
-
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{comp pmf.PNG}
+\caption{Probability Mass Function}
+\label{fig:pmf}
+\includegraphics[width=\columnwidth]{comp cdf.PNG}
+\caption{CDF}
+\label{fig:cdf}
+\end{figure}
 \section{Problem}
 Let X represent the difference between the
 number of heads and the number of tails
@@ -89,12 +97,7 @@ Suppose, the coin is unbiased. Then, $p=q= \frac{1}{2}$.
 \begin{align}
     \therefore P(X=x) = \binom{12}{6+x}\brak{\frac{1}{2}}^{12}, x= -6\ \text{to}\ 6 
 \end{align}
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{plot_binomial.png}
-\caption{Binomial Frequency plot}
-\label{fig:binomial plot}
-\end{figure}
+
 \textbf{Download python code from here}\\
 \begin{lstlisting}
 https://github.com/Swati-Mohanty/AI5002/blob/main/Compulsory Assignment/codes/comp.py
