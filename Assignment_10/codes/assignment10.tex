@@ -1,0 +1,82 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{pgfplots}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{enumerate}	
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{hyperref}
+%\usepackage[framemethod=tikz]{mdframed}
+\usepackage{listings}
+    %\usepackage[latin1]{inputenc}                                 %%
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                         %%
+  \providecommand{\nCr}[2]{\,^{#1}C_{#2}}
+  \providecommand{\nPr}[2]{\,^{#1}P_{#2}}
+  \lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+\title{Assignment 10
+\\Probability and Random Variables }
+\author{Swati Mohanty (EE20RESCH11007) }
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Problem}
+Let $X_1$ , $X_2$ , $X_3$...  be i.i.d N(1,1) random variable. Let  $S_n$ =  $(X_1)^2$+$(X_2)^2$+$(X_3)^2$+....+$(X_n)^2$ for n $\geq $ 1. Then $ \lim_{n\to\infty} \frac{Var (S_n)}{n}$  is :
+
+\section{Solution}
+We know, If $Z_i$ for 1 $\leq i \leq$ n are independent standard normal random variables , $X = \sum_{i=1} ^{n}Z_i^2$ has chi-sqaure distribution with n degree of freedom.The moment generating function for the same is given as:
+\begin{align}
+ = \int_{-\infty}^{\infty} e^{ tx^2}f(x;1,1) \,dx
+    \\ = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi\sigma^2}}e^{\frac{-(x-\mu)^2}{2\sigma^2}}e^{ tx^2} \,dx 
+    \\ = \int_{-\infty}^{\infty} \frac{1}{\sqrt{2\pi}}e^{\frac{-(x-1)^2}{2 \times 1}}e^{ \frac{tx^2}{2}} \,dx 
+    \\= e^{\frac{t^2 - t}{2}}
+\end{align}
+From moment generating function, the second moment is the variance(t=1).This gives $Var(X^2)$ = 1.
+The given random variables are i.i.d,  so ${Var (S_n)} = n {Var (X^2)}$.
+\begin{align}
+     \lim_{n\to\infty} \frac{Var (S_n)}{n} = n \frac{Var (X^2)}{n}
+     \\={Var (X^2)} = 1
+\end{align}
+%\\\textbf{Download python code from here}\\
+%\begin{lstlisting}
+%https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_8/codes/gate_19.py
+%\end{lstlisting}
+\\\textbf{Download latex code from here-}\\
+\begin{lstlisting}
+https://github.com/Swati-Mohanty/AI5002/blob/main/Assignment_10/codes/assignment10.tex
+\end{lstlisting}
+
+\end{document}
